@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BotGroup</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./node_modules/formbase/dist/formbase.min.css"> 
+    <link rel="stylesheet" href="./node_modules/noty/src//themes/mint.scss">     
+  </head>
+  <body>
+   <h1 class="logo"><img src="images/telegram.png"/>BotGroup</h1>
+
+<section class="section-group-invite">
+
+  <label class="label" for="givenname">Source Group</label>
+  <input class="input" id="sourceName" name="sourceName" type="text" autocorrect="off" autocomplete="sourceName" placeholder="Source Group Name">
+
+  <label class="label" for="destinationName">Destination Group</label>
+  <input class="input" id="destinationName" name="destinationName" type="text" autocorrect="off" autocomplete="destinationName" placeholder="Destination Group Name">
+  <button class="btn-default start-invite-friends"> <img src="images/group.png" class="icon-button"/>&nbsp;&nbsp;Invite Users</button>
+
+</section>
+
+<section class="section-settings">
+  <h4>Session</h4>
+    <label class="label" for="sessionName">Name</label>
+    <input class="input" id="sessionName" name="sessionName" type="text" autocorrect="off" autocomplete="sourceName" placeholder="any name">
+  
+    <label class="label" for="sessionAreaCode">Area Code</label>
+    <input class="input" id="sessionAreaCode" name="sessionAreaCode" type="text" autocorrect="off" autocomplete="sessionAreaCode" placeholder="+34">
+
+    <label class="label" for="fullPhoneNumber"></label>
+    <input class="input" id="fullPhoneNumber" name="fullPhoneNumber" type="text" autocorrect="off" autocomplete="fullPhoneNumber" placeholder="+3434643124304">
+
+    <h4>API</h4>
+    <label class="label" for="apiID">ID</label>
+    <input class="input" id="apiID" name="apiID" type="text" autocorrect="off" autocomplete="sourceName" placeholder="123456">
+
+    <label class="label" for="apiHash">Hash</label>
+    <input class="input" id="apiHash" name="apiHash" type="text" autocorrect="off" autocomplete="apiHash" placeholder="e733eb605ab03587f2ea0f4c8cebbf65">
+
+    <button class="btn save-settings">Save</button>
+</section>
+
+<button class="floating-button open-settings"><img src="images/settings.png" /></button>
+<button class="floating-button open-group-invite"><img src="images/group.png" /></button>
+
+<script>
+  // You can also require other files to run in this process
+  require('./renderer.js')
+</script>
+  </body>
+</html>

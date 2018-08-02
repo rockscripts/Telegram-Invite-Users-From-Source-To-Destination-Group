@@ -1,0 +1,16 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "Invite Users from a source to destination group",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": ["telegram","invite friends"],
+  "author": "rockscripts",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  }
+}

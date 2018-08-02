@@ -1,0 +1,77 @@
+body
+{
+    background: #3a7fd5;
+    margin: 10px!important;
+    background: linear-gradient(to right, #3a7fd5, #6ebce2);
+}
+label
+{
+    text-shadow:1px 0px white;
+}
+.logo
+{
+    text-shadow: 2px 2px #ccc;
+    text-align: center;
+}
+.btn-default {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn {
+    background-color: #ccc; /* Green */
+    border: none;
+    color: black;
+    padding: 6px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.icon-button
+{
+    position: absolute;
+    margin-left: -22px;  
+    margin-top: -3px;    
+}
+.icon-button-hover
+{
+ opacity: 0.9;
+ cursor: pointer;
+ text-shadow:1px 1px black;
+}
+.floating-button
+{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 23px;
+    background: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+.open-group-invite
+{
+    display: none;
+}
+.section-settings
+{
+    display: none;
+}
+.noty_body
+{
+    background: green;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
