@@ -7,10 +7,10 @@ Main engine was writen in Python thanks to  and User interface in NodeJS
 
 <br>
 <p>
-<img src='screenshots/images/1.png'>
+<img src='screenshots/1.png'>
 </p>
 <p>
-<img src='screenshots/images/2.png'>
+<img src='screenshots/2.png'>
 </p>
 Contact me if you have any questions: <b>rockscripts@gmail.com</b>
 </p>
