@@ -75,3 +75,13 @@ label
     right: 4px;
     cursor: pointer;
 }
+.sentCodeItem
+{
+    display: none;
+}
+.sentCodeRow
+{
+    margin-bottom: 6px;
+    text-shadow: 1px 1px black;
+    color: red;
+}

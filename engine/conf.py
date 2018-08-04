@@ -20,7 +20,7 @@ apiSession = sys.argv[2]
 apiSession = json.loads(apiSession)
 name = apiSession["name"][0]
 areaCode = apiSession["areacode"][0]
-phone = apiSession["areacode"][0]
+phone = apiSession["phone"][0]
 
 sourceGroup = sys.argv[3]
 destinationGroup = sys.argv[4]

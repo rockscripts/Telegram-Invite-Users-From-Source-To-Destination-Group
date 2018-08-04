@@ -126,21 +126,46 @@ function getGroupInviter()
             var destinationGroup = jQuery("#destinationName").val();
 
             var options = 
-                {
-                    mode: 'text',
-                    pythonPath: '/usr/bin/python3',
-                    pythonOptions: ['-u'],
-                    scriptPath: path.join(__dirname, '/../engine/'),
-                    args: [JSON.stringify(apiSettings), JSON.stringify(sessionSettings), sourceGroup, destinationGroup]
-                };
-                
-                PythonShell.run('start.py', options, function (err, results) {
-                if (err) throw err;
-                // results is an array consisting of messages collected during execution
-                console.log('results: %j', results);
-                });
+            {
+                mode: 'text',
+                pythonPath: '/usr/bin/python3',
+                pythonOptions: ['-u'],
+                scriptPath: path.join(__dirname, '/../engine/'),
+                args: [JSON.stringify(apiSettings), JSON.stringify(sessionSettings), sourceGroup, destinationGroup]
+            };
+            var pyshell = new PythonShell('start.py',options);
+            // sends a message to the Python script via stdin
+            pyshell.on('message', function (message) {
+              // received a message sent from the Python script (a simple "print" statement)
+              console.log(message);
+              if(message=="askedCode")
+              {
+                /*setTimeout(function() 
+                  {
+                    pyshell.send('123456').end();
+                  }, 5000);  */
+                    jQuery(".sentCodeItem").fadeIn();
 
+                    var n = 50;
+                    setTimeout(countDown,500);
+
+                    function countDown(){
+                    n--;
+                    if(n > 0)
+                    {
+                      setTimeout(countDown,500);
+                    }
+                    jQuery(".countDown").html(n);
+                    if(n==0)
+                    {
+                      var sentCode = jQuery("#sentCode").val();
+                      pyshell.send(sentCode).end();
+                    }
+                    }              
+              }
+            });
         });
     });
-   
+
+    
 }

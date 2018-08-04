@@ -27,3 +27,19 @@ This is a Python and NodeJS application and you need follow things in your opera
 </ul>
 </p>
 <h4>Running APP</h4>
+<p>Engine Part with Python</p>
+<ul>
+<li>cd engine</li>
+<li>pip3 install Telethon</li>
+<li>pip3 install Telethon-sync</li>
+<li>pip3 install PySocks</li>
+<li>pip3 install peewee</li>
+<li>pip3 install colorama</li>
+<li>pip3 install pprint</li>
+</ul>
+<p>GUI part with ElectronJS</p>
+<ul>
+<li>cd gui</li>
+<li>npm install</li>
+<li>npm start</li>
+</ul>

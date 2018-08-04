@@ -9,16 +9,22 @@
   </head>
   <body>
    <h1 class="logo"><img src="images/telegram.png"/>BotGroup</h1>
+<div class="dialog">
 
+</div>
 <section class="section-group-invite">
-
+ 
   <label class="label" for="givenname">Source Group</label>
   <input class="input" id="sourceName" name="sourceName" type="text" autocorrect="off" autocomplete="sourceName" placeholder="Source Group Name">
 
   <label class="label" for="destinationName">Destination Group</label>
   <input class="input" id="destinationName" name="destinationName" type="text" autocorrect="off" autocomplete="destinationName" placeholder="Destination Group Name">
-  <button class="btn-default start-invite-friends"> <img src="images/group.png" class="icon-button"/>&nbsp;&nbsp;Invite Users</button>
-
+  
+  <label class="label" for="sentCode" class="sentCodeItem">Sent Code</label>
+  <input class="input" id="sentCode" name="sentCode" class="sentCodeItem" type="text" autocorrect="off" autocomplete="destinationName" placeholder="123456">
+  <div class="sentCodeItem sentCodeRow"><span>Will expire in:&nbsp;&nbsp;</span><span class="countDown"></span></div>
+  <div><button class="btn-default start-invite-friends"> <img src="images/group.png" class="icon-button"/>&nbsp;&nbsp;Invite Users</button></div>
+  
 </section>
 
 <section class="section-settings">

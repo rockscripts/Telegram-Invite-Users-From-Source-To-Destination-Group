@@ -79,13 +79,27 @@ class TeleInviter():
         fn.stdout_title('\nLaunching client "%s" ...' % client_session['name'])
         client = telethon.TelegramClient(client_session['name'], conf.tg_api_id, conf.tg_api_hash, proxy=client_session['proxy'])
         client.connect()
+        #from pprint import pprint
+        #pprint(vars(client))
+        #print(client)
         if client.is_user_authorized():
             fn.print_success(' DONE')
             return client
         else:
             fn.print_warning(' Login by "%s"' % client_session['phone'])
             client.send_code_request(client_session['phone'])
-            me = client.sign_in(client_session['phone'], input(colorama.Fore.LIGHTMAGENTA_EX + '    Login code: '))
+            flagsentCode = 0
+            sentCode = 0
+
+            if flagsentCode==0:   
+                print("askedCode")
+
+
+            for line in sys.stdin:
+                sentCode = (line[:-1])
+            #sentCode
+            
+            me = client.sign_in(client_session['phone'],sentCode)
             fn.print_success('    Login for "%s" is SUCCESSFUL' % self._get_user_display_name(me))
 
             if client.is_user_authorized():
@@ -178,7 +192,7 @@ class TeleInviter():
         # error when session user is banned
         try:
             group = self._client.get_entity(key)
-
+            print(group)
             # Join if not IN.
             if group.left:
                 self._client(JoinChannelRequest(group))
@@ -189,13 +203,13 @@ class TeleInviter():
             # Democracy
             if group.democracy:
                 # All members can add members
-                fn.print_success('    %s' % group.title)
+               # fn.print_success('    %s' % group.title)
                 self._destination_group = group
                 return True
             else:
                 # Only admins can add members
                 if (group.admin_rights is not None and group.admin_rights.invite_users):
-                    fn.print_success('    %s' % group.title)
+                    #fn.print_success('    %s' % group.title)
                     self._destination_group = group
                     return True
                 else:

@@ -7,10 +7,22 @@
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": ["telegram","invite friends"],
+  "keywords": [
+    "telegram",
+    "invite friends"
+  ],
   "author": "rockscripts",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.6"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "electron-debug": "^2.0.0",
+    "formbase": "^7.0.0",
+    "jquery": "^3.3.1",
+    "noty": "^3.2.0-beta",
+    "python-shell": "^0.5.0",
+    "xml2js": "^0.4.19"
   }
 }
